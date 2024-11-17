@@ -1,16 +1,19 @@
-.food_display{
-    margin-top: 30px;
+.food_display {
+    margin-top: 40px; /* Increase margin from the top */
+    padding: 0 5vw; /* Added horizontal padding */
 }
 
-.food_display h2{
-    font-size: max(2vw,24px);
-    font-weight: 600;
+.food_display h2 {
+    font-size: max(3vw, 26px); /* Larger title font */
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.food-display-list{
+.food-display-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(240px,1fr));
-    margin-top: 30px;
-    gap: 30px;
-    row-gap: 50px;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); /* Slightly larger grid items */
+    gap: 30px 40px; /* Increased gap for better spacing */
+    row-gap: 60px; /* More vertical space between items */
 }

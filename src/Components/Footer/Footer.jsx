@@ -7,8 +7,7 @@ const Footer = () => {
     <div className='footer' id='footer'>
       <div className="footer-">
         <div className="footer-content-left">
-            <img src={assets.logo} alt="" />
-            <p>Lorem ipsum is typically a corrupted version of De finibus bonorum et malorum, a 1st-century BC text by the Roman statesman and philosopher Cicero, with words altered, added, and removed to make it nonsensical and improper Latin. The first two words themselves are a truncation of dolorem ipsum </p>
+            <p>Our restaurant offers a cozy atmosphere and a diverse menu, from familiar traditional dishes to attractive specialties. Each dish is meticulously prepared, retaining its unique flavor and full of creativity. We are committed to bringing you a wonderful culinary experience, dedicated service to always make you feel satisfied.</p>
             <div className="footer-social-icons">
               <img src={assets.facebook_icon} alt="" />
               <img src={assets.linkedin_icon} alt="" />
@@ -33,7 +32,7 @@ const Footer = () => {
         </div>
       </div>
       <hr />
-      <p className="footer-copyright">Copyright 2024 © VjpProLuxury.com - All Right Reserved.</p>
+      <p className="footer-copyright">Copyright © Thanh Tai Inc. 2024 All rights reserved.</p>
     </div>
   )
 }

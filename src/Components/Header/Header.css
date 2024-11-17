@@ -1,53 +1,57 @@
-.header{
-    height: 34vw;
-    margin: 30px auto;
-    background: url('/header_img.png') no-repeat;
-    background-size: contain;
+.header {
+    height: 35vw; /* Slightly larger header area */
+    margin: 20px auto; /* Reduced margin */
+    background: url('/banner.png') no-repeat center center;
+    background-size: cover; /* Changed to 'cover' for full background coverage */
     position: relative;
+    border-radius: 10px; /* Added border-radius for softer edges */
 }
 
-.header-contents{
+.header-contents {
     position: absolute;
     display: flex;
     flex-direction: column;
-    align-items: start;
-    gap: 1.5vw;
-    max-width: 50%;
+    justify-content: flex-start; /* Align items at the top */
+    align-items: flex-start; 
+    gap: 2vw;
+    max-width: 60%; /* Increased width for better content visibility */
     bottom: 10%;
-    left: 6vw;
-    animation: fadeIn 3s;
+    left: 10%;
+    animation: fadeIn 3s ease-out;
 }
 
-.header-contents h2{
-    font-weight: 500;
-    color: #FFD700;
-    font-size: max(4.5vw,22px);
+.header-contents p {
+    color: rgb(99, 56, 197);
+    font-size: max(1.2vw, 16px); /* Slightly larger text */
+    opacity: 1;
 }
 
-.header-contents p{
-    color: white;
-    font-size: 1vw;
-}
-
-.header-contents button{
+.header-contents button {
     border: none;
-    color: #747474;
-    font-weight: 500;
-    padding: 1vw 2.3vw;
-    background-color: white;
-    font-size: max(1vw,13px);
-    border-radius: 50px;
+    color: #333;
+    font-weight: bold;
+    padding: 1.2vw 2.5vw;
+    background-color: #fff;
+    font-size: max(1.1vw, 15px);
+    border-radius: 30px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1); /* Added shadow for better visibility */
+    transition: background-color 0.3s ease;
+}
+
+.header-contents button:hover {
+    background-color: #FFD700; /* Change background on hover */
+    color: #fff;
 }
 
 @media (max-width: 1050px) {
     .header-contents {
-        max-width: 45%;
+        max-width: 50%; /* Slightly smaller on medium screens */
     }
 }
 
 @media (max-width: 750px) {
     .header-contents {
-        max-width: 65%;
+        max-width: 70%; /* Even smaller for small screens */
     }
 
     .header-contents p {
@@ -55,6 +59,6 @@
     }
 
     .header-contents button {
-        padding: 2vw 4vw;
+        padding: 3vw 6vw;
     }
 }

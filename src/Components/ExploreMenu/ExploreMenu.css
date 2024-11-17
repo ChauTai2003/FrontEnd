@@ -1,58 +1,82 @@
-.explore-menu{
+.explore-menu {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-
+    gap: 25px; /* Increased gap for better separation */
+    padding: 0 5vw; /* Added horizontal padding */
 }
 
-.explore-menu h1{
-    color: #262626;
-    font-weight: 500;
+.explore-menu h1 {
+    color: #333; /* Slightly darker color for better contrast */
+    font-weight: 600; /* Bold for emphasis */
+    font-size: max(2.5vw, 22px); /* Responsive font size */
+    text-align: center;
+    margin-bottom: 15px; /* Space below heading */
 }
 
-.explore-menu-text{
-    max-width: 60%;
-    columns: #808080;
-} 
+.explore-menu-text {
+    max-width: 70%; /* Increased max-width for better text visibility */
+    color: #666; /* Lighter text color */
+    font-size: max(1.1vw, 16px); /* Adjusted font size */
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.6; /* Improve readability */
+}
 
-.explore-menu-list{
+.explore-menu-list {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 30px;
+    gap: 40px; /* Increased space between items */
     text-align: center;
-    margin: 20px 0px;
-    overflow-x: scroll;
+    margin: 20px 0;
+    overflow-x: auto;
+    padding-bottom: 10px; /* Space below for scroll */
 }
 
-.explore-menu-list::-webkit-scrollbar{
-    display: none;
+.explore-menu-list::-webkit-scrollbar {
+    height: 6px; /* Slimmer scrollbar */
+    background-color: #f1f1f1;
 }
 
-.explore-menu-list-item img{
-    width: 7.5vw;
-    min-width: 80px;
+.explore-menu-list::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Grey thumb for scrollbar */
+    border-radius: 10px;
+}
+
+.explore-menu-list-item img {
+    width: 8vw; /* Slightly larger images */
+    min-width: 90px;
     cursor: pointer;
     border-radius: 50%;
-    transition: 0.2s;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
 }
 
-.explore-menu-list-item p{
+.explore-menu-list-item img:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15); /* Added subtle shadow */
+}
+
+.explore-menu-list-item p {
     margin-top: 10px;
     color: #747474;
-    font-size: max(1.4vw,16px);
+    font-size: max(1.5vw, 18px);
     cursor: pointer;
+    transition: color 0.3s ease;
 }
 
-.explore-menu hr{
-    margin: 10px 0px;
+.explore-menu-list-item p:hover {
+    color: #FFD700; /* Highlight text on hover */
+}
+
+.explore-menu hr {
+    margin: 10px 0;
     height: 2px;
     background-color: #e2e2e2;
     border: none;
 }
 
-.explore-menu-list-item .active{
-    border: 4px solid tomato;
+.explore-menu-list-item .active {
+    border: 4px solid #FFD700; /* Gold active border for better contrast */
     padding: 2px;
 }
 
@@ -60,17 +84,23 @@
     .explore-menu-text {
         max-width: 100%;
         font-size: 14px;
+        text-align: left; /* Text alignment adjustment */
     }
 }
 
 @media (max-width: 750px) {
-    .footer-content {
-        display: flex;
-        flex-direction: column;
-        gap: 35px;
+    .explore-menu-list {
+        flex-wrap: wrap; /* Allow items to wrap for small screens */
+        gap: 20px; /* Reduced gap for mobile */
+        justify-content: center;
     }
 
-    .footer-copyright {
-        text-align: center;
+    .explore-menu-list-item img {
+        width: 12vw; /* Larger image size for mobile */
+        min-width: 100px;
+    }
+
+    .explore-menu-list-item p {
+        font-size: 16px; /* Smaller font size for mobile */
     }
 }
